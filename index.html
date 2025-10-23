@@ -42,6 +42,28 @@
                             </svg>
                         </a>
                     </div>
+                    <div class="hero-education-badges">
+                        <div class="education-badge education-badge-masters">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 10V16M2 10L12 5L22 10L12 15L2 10Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M6 12V17C6 17 9 20 12 20C15 20 18 17 18 17V12" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <div class="education-badge-content">
+                                <span class="education-badge-degree">MS Computer Science</span>
+                                <span class="education-badge-school">Georgia State University • 2023-2025</span>
+                            </div>
+                        </div>
+                        <div class="education-badge education-badge-bachelors">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 10V16M2 10L12 5L22 10L12 15L2 10Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M6 12V17C6 17 9 20 12 20C15 20 18 17 18 17V12" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <div class="education-badge-content">
+                                <span class="education-badge-degree">BS Computer Science</span>
+                                <span class="education-badge-school">Vellore Institute of Technology • 2016-2020</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="hero-content">
                     <h1 class="hero-title">
@@ -217,9 +239,18 @@
                     A selection of projects that showcase my technical expertise
                 </p>
             </div>
+            
+            <!-- Category Tabs -->
+            <div class="project-tabs">
+                <button class="project-tab active" data-category="all">All Projects</button>
+                <button class="project-tab" data-category="ai-products">AI Products</button>
+                <button class="project-tab" data-category="ml-research">ML Research</button>
+                <button class="project-tab" data-category="computer-vision">Computer Vision</button>
+            </div>
+            
             <div class="projects-grid">
                 <!-- Cre8able -->
-                <div class="project-card">
+                <div class="project-card" data-category="ai-products">
                     <div class="project-content">
                         <h3 class="project-title">Cre8able — Multimodal Video Editing</h3>
                         <p class="project-description">Built and launched from idea to live beta in 6 weeks. Cut creator editing workload by 70% with Gemini + FFmpeg on FastAPI/S3. Context-aware recommendations improved edit acceptance by 25%.</p>
@@ -233,7 +264,7 @@
                 </div>
 
                 <!-- Whisker -->
-                <div class="project-card">
+                <div class="project-card" data-category="ai-products">
                     <div class="project-content">
                         <h3 class="project-title">Whisker — LLM Pet-Care Assistant</h3>
                         <p class="project-description">Shipped in 2 weeks. Containerized RAG backend (Postgres + FastAPI) with sub-second response streaming. Scaled to 50+ weekly active beta users.</p>
@@ -247,7 +278,7 @@
                 </div>
 
                 <!-- Multi Agent Debate -->
-                <div class="project-card">
+                <div class="project-card" data-category="ml-research">
                     <div class="project-content">
                         <h3 class="project-title">Multi-Agent Debate for Movie Consensus</h3>
                         <p class="project-description">Multi-agent framework with LLM agents engaging in adversarial dialogue to refine reasoning. LLM-as-Judge evaluation improved coherence over single-agent baselines. RAG with ChromaDB + Gemini 1.5 Flash for personalized recommendations.</p>
@@ -261,7 +292,7 @@
                 </div>
 
                 <!-- Visual Py-SLAM -->
-                <div class="project-card">
+                <div class="project-card" data-category="computer-vision">
                     <div class="project-content">
                         <h3 class="project-title">Visual Py-SLAM Toolkit</h3>
                         <p class="project-description">End-to-end modular SLAM pipeline from raw video to trajectory visualization. Implemented ORB feature detection/matching, essential matrix decomposition, RANSAC outlier rejection, and scale initialization for robust camera trajectory estimation.</p>
@@ -275,7 +306,7 @@
                 </div>
 
                 <!-- Fronto-Cerebellar ML -->
-                <div class="project-card">
+                <div class="project-card" data-category="ml-research">
                     <div class="project-content">
                         <h3 class="project-title">Statistical ML for Fronto-Cerebellar Circuitry</h3>
                         <p class="project-description">Preprocessed sMRI/dMRI from ABCD dataset (N=10K) using SPM12, DARTEL, FSL. Built Bayesian Ridge, SVR, Neural Networks for cognitive prediction. Achieved r² of 0.065 ± 0.009 with nested 5x5 cross-validation, outperforming fronto-parietal models.</p>
@@ -289,7 +320,7 @@
                 </div>
 
                 <!-- mmWave Radar Detection -->
-                <div class="project-card">
+                <div class="project-card" data-category="computer-vision">
                     <div class="project-content">
                         <h3 class="project-title">Detection of Milli-sized Objects with mmWave Radar</h3>
                         <p class="project-description">Detected millimeter-sized objects using 60 GHz IWR1683ISK FMCW mmWave radar. Detected penny-sized objects at 2m distance. Analyzed Range/Doppler FFTs across 6 materials and 5 distances using MATLAB Radar Toolbox and Python.</p>
@@ -303,7 +334,7 @@
                 </div>
 
                 <!-- Pose-Assisted TrackFormer -->
-                <div class="project-card">
+                <div class="project-card" data-category="computer-vision">
                     <div class="project-content">
                         <h3 class="project-title">Pose-Assisted TrackFormer</h3>
                         <p class="project-description">Enhanced TrackFormer (TUM/Facebook) by integrating pose estimation for improved identity consistency. Developed Pose Encoding Module with Keypoint R-CNN extracting (17 x 3) pose features, fused with track embeddings via learnable linear layer.</p>
@@ -427,57 +458,6 @@
                         <div class="skill-item">AWS / GCP</div>
                         <div class="skill-item">Multi‑GPU Training</div>
                         <div class="skill-item">Real‑time Inference</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Education</span>
-                <h2 class="section-title">Academic Background</h2>
-                <p class="section-description">
-                    My educational journey and qualifications
-                </p>
-            </div>
-            <div class="education-grid">
-                <!-- Education Card 1 -->
-                <div class="education-card">
-                    <div class="education-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                            <path d="M22 10V16M2 10L12 5L22 10L12 15L2 10Z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M6 12V17C6 17 9 20 12 20C15 20 18 17 18 17V12" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3 class="education-degree">Master of Science in Computer Science</h3>
-                    <p class="education-institution">University Name</p>
-                    <p class="education-period">2019 - 2021</p>
-                    <p class="education-description">
-                        Specialized in Artificial Intelligence, Machine Learning, and Distributed Systems.
-                        Thesis: "Optimizing Cloud Infrastructure for Real-time Applications"
-                    </p>
-                    <div class="education-tags"></div>
-                </div>
-
-                <!-- Education Card 2 -->
-                <div class="education-card">
-                    <div class="education-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                            <path d="M22 10V16M2 10L12 5L22 10L12 15L2 10Z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M6 12V17C6 17 9 20 12 20C15 20 18 17 18 17V12" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3 class="education-degree">Bachelor of Science, Computer Science</h3>
-                    <p class="education-institution">Vellore Institute of Technology</p>
-                    <p class="education-period">Jul 2016 - Jun 2020</p>
-                    <p class="education-description">
-                        Core CS foundation; projects across computer vision and ML.
-                    </p>
-                    <div class="education-tags">
-                        
                     </div>
                 </div>
             </div>
