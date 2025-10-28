@@ -7,14 +7,14 @@
 
 const navbar = document.querySelector('.navbar');
 const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
+const navLinksContainer = document.querySelector('.nav-links');
 const navLinks = document.querySelectorAll('.nav-link');
 
 // Mobile menu toggle
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
+        navLinksContainer.classList.toggle('active');
     });
 }
 
@@ -22,7 +22,7 @@ if (navToggle) {
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navToggle?.classList.remove('active');
-        navMenu?.classList.remove('active');
+        navLinksContainer?.classList.remove('active');
     });
 });
 
@@ -410,9 +410,9 @@ if (heroStats) {
 
 document.addEventListener('keydown', (e) => {
     // ESC key closes mobile menu
-    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
+    if (e.key === 'Escape' && navLinksContainer?.classList.contains('active')) {
+        navToggle?.classList.remove('active');
+        navLinksContainer?.classList.remove('active');
     }
 });
 

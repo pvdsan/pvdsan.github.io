@@ -35,7 +35,7 @@
     <meta name="format-detection" content="telephone=no">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='50' y='50' font-family='Inter, system-ui, sans-serif' font-size='45' font-weight='700' fill='%234a9eff' text-anchor='middle' dominant-baseline='central'%3ESD%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='50' y='50' font-family='Inter, system-ui, sans-serif' font-size='45' font-weight='700' fill='%234a9eff' text-anchor='middle' dominant-baseline='central'%3ESPD%3C/text%3E%3C/svg%3E">
     <link rel="apple-touch-icon" href="Sanket_happy_Garden.jpeg">
     
     <!-- Structured Data (JSON-LD) -->
@@ -90,7 +90,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="nav-logo">
+                    <span class="logo-text">SPD</span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#publications" class="nav-link">Research</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -243,7 +263,6 @@
     <section id="experience" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Experience</span>
                 <h2 class="section-title">Professional Journey</h2>
                 <p class="section-description">
                     Building impactful solutions across various industries
@@ -380,7 +399,6 @@
     <section id="projects" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Projects</span>
                 <h2 class="section-title">Featured Work</h2>
                 <p class="section-description">
                     A selection of projects that showcase my technical expertise
@@ -536,7 +554,6 @@
     <section id="publications" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Publications</span>
                 <h2 class="section-title">Articles & Research</h2>
                 <p class="section-description">
                     Technical articles, blog posts, and research contributions
